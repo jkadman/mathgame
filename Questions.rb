@@ -9,5 +9,5 @@ class Questions
   end
 end
 
-q1 = Questions.new
-p q1.question
+# q1 = Questions.new
+# p q1.question
