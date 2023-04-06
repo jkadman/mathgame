@@ -5,5 +5,5 @@ class Players
   end
 end
 
-Bob = Players.new("Jason")
-p Bob
+Player1 = Players.new(gets.chomp)
+p Player1
