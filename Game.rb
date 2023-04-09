@@ -26,8 +26,15 @@ class Game
         puts "------New Turn------ \n#{@player1} what is?"
           if !new_question
               puts "I'm sorry incorrect" 
-              points1 -= 1 
+              points1 -= 1
+              if points1 == 0
+                winner = true  
+                winner
+                puts "------Game Over------ \n#{@player2} wins! \nFinal score: #{@player1}: #{points1}, #{@player2}: #{points2}"
+                break
+              end
               puts "#{@player1}: #{points1}, #{@player2}: #{points2}" 
+              
           else 
               puts "#{@player1} Yes!  Right answer!"
               puts "#{@player1}: #{points1}, #{@player2}: #{points2}"      
@@ -36,20 +43,17 @@ class Game
           if !new_question
               puts "I'm sorry incorrect"
               points2 -= 1 
+              if points2 == 0
+                winner = true
+                winner
+                puts "------Game Over------ \n#{@player1} wins! \nFinal score: #{@player1}: #{points1}, #{@player2}: #{points2}"
+                break
+              end
               puts "#{@player1}: #{points1}, #{@player2}: #{points2}"
           else
               puts "#{@player2} Yes!  Right answer!"
               puts "#{@player1}: #{points1}, #{@player2}: #{points2}"
           end
-      if points1 == 0 && points2 > 0
-        winner = true  
-        winner
-        puts "------Game Over------ #{@player2} wins! \nFinal score: #{@player1}: #{points1}, #{@player2}: #{points2}"
-      elsif points2 == 0 && points1 > 0
-        winner = true
-        winner
-        puts "------Game Over------ #{@player1} wins! \nFinal score: #{@player1}: #{points1}, #{@player2}: #{points2}"
-      end
     end
   end
 
