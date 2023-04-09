@@ -1,4 +1,4 @@
-require './Questions'
+require './Helpers'
 require './Players'
 
 class Game

@@ -1,6 +1,6 @@
 require './Game'
 require './Players'
-require './Questions'
+require './Helpers'
 
 game = Game.new
 game.complete_game
