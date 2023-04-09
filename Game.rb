@@ -12,11 +12,6 @@ class Game
     @player2 = Players.new
   end
   
-  def message
-    "Hello new players please enter your names"
-  end
-  
-  
   def new_question
     sum = question
     player_answer = gets.chomp.to_i
